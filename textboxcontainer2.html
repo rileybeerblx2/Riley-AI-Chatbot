@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT Textbox Container</title>
+<style>
+    .textbox-container {
+        position: relative;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .textbox-container input[type="text"] {
+        border: none;
+        outline: none;
+        width: calc(100% - 40px);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .send-button {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #333;
+        color: #fff;
+        border: none;
+        /* Changing the border-radius to make it square */
+        border-radius: 0;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="textbox-container">
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button class="send-button" onclick="sendMessage()">></button>
+</div>
+
+<script>
+    function sendMessage() {
+        const message = document.getElementById('messageInput').value;
+        // Here you can handle sending the message, for now just log it
+        console.log('Sending message:', message);
+    }
+</script>
+</body>
+</html>
